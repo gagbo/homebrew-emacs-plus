@@ -1,0 +1,24 @@
+From 92421c9161991b19470552c06e0b3bc73dacd2dd Mon Sep 17 00:00:00 2001
+From: Gerry Agbobada <git@gagbo.net>
+Date: Sun, 6 Nov 2022 19:37:58 +0100
+Subject: [PATCH] Allow spsupr on Apple targets
+
+---
+ src/spsupr.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/spsupr.c b/src/spsupr.c
+index c81478f..864c609 100644
+--- a/src/spsupr.c
++++ b/src/spsupr.c
+@@ -1,6 +1,6 @@
+ #include "spsupr.h"
+ 
+-#if defined(__linux__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__)
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/wait.h>
+-- 
+2.38.1
+

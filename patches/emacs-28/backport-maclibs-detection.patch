@@ -1,0 +1,26 @@
+From f5c3d24f9c76863e3abe91e5b639effdeebee7c9 Mon Sep 17 00:00:00 2001
+From: Gerry Agbobada <git@gagbo.net>
+Date: Sun, 6 Nov 2022 19:23:10 +0100
+Subject: [PATCH] backport 16dfe04be2c57fc82ccdd56cad97b39d559a5afe
+
+---
+ configure.ac | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 6607843..0c22164 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -3843,8 +3843,8 @@ if test "${with_native_compilation}" != "no"; then
+         if test -n "`$BREW --prefix --installed libgccjit 2>/dev/null`"; then
+           MAC_CFLAGS="-I$(dirname $($BREW ls -v libgccjit | \
+                                                 grep libgccjit.h))"
+-          MAC_LIBS="-L$(dirname $($BREW ls -v libgccjit| \
+-                                            grep libgccjit.so\$))"
++          MAC_LIBS="-L$(dirname $($BREW ls -v libgccjit \
++                                  | grep -m1 -E 'libgccjit\.(so|dylib)$'))"
+         fi
+       fi
+
+--
+2.38.1
