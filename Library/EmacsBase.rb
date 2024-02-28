@@ -8,9 +8,6 @@ class CopyDownloadStrategy < AbstractFileDownloadStrategy
 end
 
 class EmacsBase < Formula
-  desc "GNU Emacs text editor"
-  homepage "https://www.gnu.org/software/emacs/"
-
   def self.init version
     @@urlResolver = UrlResolver.new(version, ENV["HOMEBREW_EMACS_PLUS_MODE"] || "remote")
   end
@@ -89,6 +86,8 @@ class EmacsBase < Formula
 
     system "/usr/libexec/PlistBuddy -c 'Add NSCameraUsageDescription string' '#{plist}'"
     system "/usr/libexec/PlistBuddy -c 'Set NSCameraUsageDescription Emacs requires permission to access the Camera.' '#{plist}'"
+    system "/usr/libexec/PlistBuddy -c 'Add NSMicrophoneUsageDescription string' '#{plist}'"
+    system "/usr/libexec/PlistBuddy -c 'Set NSMicrophoneUsageDescription Emacs requires permission to access the Microphone.' '#{plist}'"
     system "touch '#{app}'"
   end
 end

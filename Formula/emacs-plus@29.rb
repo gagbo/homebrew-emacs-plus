@@ -2,10 +2,13 @@ require_relative "../Library/EmacsBase"
 
 class EmacsPlusAT29 < EmacsBase
   init 29
-  url "https://ftp.gnu.org/gnu/emacs/emacs-29.1.tar.xz"
-  mirror "https://ftpmirror.gnu.org/emacs/emacs-29.1.tar.xz"
-  sha256 "d2f881a5cc231e2f5a03e86f4584b0438f83edd7598a09d24a21bd8d003e2e01"
+  url "https://ftp.gnu.org/gnu/emacs/emacs-29.2.tar.xz"
+  mirror "https://ftpmirror.gnu.org/emacs/emacs-29.2.tar.xz"
+  sha256 "7d3d2448988720bf4bf57ad77a5a08bf22df26160f90507a841ba986be2670dc"
   env :std
+
+  desc "GNU Emacs text editor"
+  homepage "https://www.gnu.org/software/emacs/"
 
   head do
     url "https://github.com/emacs-mirror/emacs.git", :branch => "emacs-29"
@@ -94,7 +97,7 @@ class EmacsPlusAT29 < EmacsBase
   #
   # Initialize
   #
-  def initialize(*args, &block)
+  def initialize(*args, **kwargs, &block)
     a = super
     expand_path
     a
@@ -268,11 +271,11 @@ class EmacsPlusAT29 < EmacsBase
         #{prefix}
 
       To link the application to default Homebrew App location:
-        ln -s #{prefix}/Emacs.app /Applications
+        osascript -e 'tell application "Finder" to make alias file to posix file "#{prefix}/Emacs.app" at POSIX file "/Applications"'
 
       Your PATH value was injected into Emacs.app/Contents/Info.plist
 
-      Report any issues to http://github.com/d12frosted/homebrew-emacs-plus
+      Report any issues to https://github.com/d12frosted/homebrew-emacs-plus
     EOS
   end
 

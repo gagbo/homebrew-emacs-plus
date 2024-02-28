@@ -4,20 +4,20 @@
 </p>
 <h1 align="center">Emacs Plus</h1>
 <p align="center">
-  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions?query=workflow%3A%22Emacs+30%22">
-    <img src="https://github.com/d12frosted/homebrew-emacs-plus/workflows/Emacs%2030/badge.svg" alt="Emacs 30 CI Status Badge">
+  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-30.yml">
+    <img src="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-30.yml/badge.svg" alt="Emacs 30 CI Status Badge">
   </a>
-  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions?query=workflow%3A%22Emacs+29%22">
-    <img src="https://github.com/d12frosted/homebrew-emacs-plus/workflows/Emacs%2029/badge.svg" alt="Emacs 29 CI Status Badge">
+  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-29.yml">
+    <img src="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-29.yml/badge.svg" alt="Emacs 29 CI Status Badge">
   </a>
-  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions?query=workflow%3A%22Emacs+28%22">
-    <img src="https://github.com/d12frosted/homebrew-emacs-plus/workflows/Emacs%2028/badge.svg" alt="Emacs 28 CI Status Badge">
+  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-28.yml">
+    <img src="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-28.yml/badge.svg" alt="Emacs 28 CI Status Badge">
   </a>
-  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions?query=workflow%3A%22Emacs+27%22">
-    <img src="https://github.com/d12frosted/homebrew-emacs-plus/workflows/Emacs%2027/badge.svg" alt="Emacs 27 CI Status Badge">
+  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-27.yml">
+    <img src="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-27.yml/badge.svg" alt="Emacs 27 CI Status Badge">
   </a>
-  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions?query=workflow%3A%22Emacs+26%22">
-    <img src="https://github.com/d12frosted/homebrew-emacs-plus/workflows/Emacs%2026/badge.svg" alt="Emacs 26 CI Status Badge">
+  <a href="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-26.yml/badge.svg">
+    <img src="https://github.com/d12frosted/homebrew-emacs-plus/actions/workflows/emacs-26.yml/badge.svg" alt="Emacs 26 CI Status Badge">
   </a>
 </p>
 #+end_html
@@ -28,7 +28,7 @@
 <img align="right" width="40%" src="images/screenshot-01.png" alt="Screenshot">
 #+end_html
 
-Emacs+ is [[https://www.gnu.org/software/emacs/emacs.html][→ GNU Emacs]] formulae for macOS [[https://brew.sh][→ Homebrew]] package manager. It offers a wide rage of extra functionality over regular [[https://formulae.brew.sh/formula/emacs#default][→ Emacs]] package. Emacs+ intent is to give the most of 'plus' stuff by default, leaving only controversial options as opt-in. Please refer to [[#options][→ Options]] section for more information.
+Emacs+ is [[https://www.gnu.org/software/emacs/emacs.html][→ GNU Emacs]] formulae for macOS [[https://brew.sh][→ Homebrew]] package manager. It offers a wide range of extra functionality over regular [[https://formulae.brew.sh/formula/emacs#default][→ Emacs]] package. Emacs+ intent is to give the most of 'plus' stuff by default, leaving only controversial options as opt-in. Please refer to [[#options][→ Options]] section for more information.
 
 #+begin_src bash
   $ brew tap d12frosted/emacs-plus
@@ -52,15 +52,15 @@ Feel free to open an issue or contact me via email if you face any issues, quest
     - [[#options][Options]]
     - [[#no-title-bar][No title bar]]
   - [[#emacs-29][Emacs 29]]
-    - [[#included][Included]]
-    - [[#options][Options]]
-    - [[#no-title-bar][No title bar]]
-  - [[#emacs-28][Emacs 28]]
     - [[#included-1][Included]]
     - [[#options-1][Options]]
-  - [[#emacs-27][Emacs 27]]
+    - [[#no-title-bar-1][No title bar]]
+  - [[#emacs-28][Emacs 28]]
     - [[#included-2][Included]]
     - [[#options-2][Options]]
+  - [[#emacs-27][Emacs 27]]
+    - [[#included-3][Included]]
+    - [[#options-3][Options]]
   - [[#emacs-26][Emacs 26]]
   - [[#features-explained][Features explained]]
     - [[#injected-path][Injected PATH]]
@@ -72,6 +72,8 @@ Feel free to open an issue or contact me via email if you face any issues, quest
   - [[#emacs-configuration][Emacs configuration]]
   - [[#known-issues][Known Issues]]
     - [[#emacs-dependency-in-other-formulas][=emacs= dependency in other formulas]]
+  - [[#faq][FAQ]]
+    - [[#how-to-changepin-commit-emacs-plus30-is-built-from][How to change/pin commit =emacs-plus@30= is built from]]
   - [[#screenshots][Screenshots]]
   - [[#acknowledgements][Acknowledgements]]
 
@@ -342,8 +344,8 @@ Knows issues:
 
 ** Icons
 
-| Option                                      | Author                     | Image                                                  | URL     |
-|---------------------------------------------+----------------------------+--------------------------------------------------------+---------|
+| Option                                        | Author                     | Image                                                  | URL     |
+|-----------------------------------------------+----------------------------+--------------------------------------------------------+---------|
 | =--with-EmacsIcon1-icon=                      | [[https://github.com/jasonm23][→ Jason Milkins]]            | [[/icons/preview/EmacsIcon1_128.png]]                      | [[https://github.com/emacsfodder/emacs-icons-project][→ Link]]  |
 | =--with-EmacsIcon2-icon=                      | [[https://github.com/jasonm23][→ Jason Milkins]]            | [[/icons/preview/EmacsIcon2_128.png]]                      | [[https://github.com/emacsfodder/emacs-icons-project][→ Link]]  |
 | =--with-EmacsIcon3-icon=                      | [[https://github.com/jasonm23][→ Jason Milkins]]            | [[/icons/preview/EmacsIcon3_128.png]]                      | [[https://github.com/emacsfodder/emacs-icons-project][→ Link]]  |
@@ -396,8 +398,10 @@ Knows issues:
 | =--with-retro-gnu-meditate-levitate-icon=     | Nevrax Design Team         | [[/icons/preview/retro-gnu-meditate-levitate_128.png]]     | [[https://www.gnu.org/graphics/meditate.en.html][→ Link]]  |
 | =--with-retro-sink-bw-icon=                   | Unknown                    | [[/icons/preview/retro-sink-bw_128.png]]                   | [[https://www.teuton.org/~ejm/emacsicon/][→ Link]]  |
 | =--with-retro-sink-icon=                      | [[https://www.teuton.org/~ejm/][→ Erik Mugele]]              | [[/icons/preview/retro-sink_128.png]]                      | [[https://www.teuton.org/~ejm/emacsicon/][→ Link]]  |
-| =--with-spacemacs-icon=                       | [[https://github.com/nashamri][→ Nasser Alshammari]]        | [[/icons/preview/spacemacs_128.png]]                       | [[https://github.com/nashamri/spacemacs-logo][→ Link]]  |
 | =--with-savchenkovaleriy-big-sur-icon=        | [[https://github.com/SavchenkoValeriy][→ Valeriy Savchenko]]        | [[/icons/preview/savchenkovaleriy-big-sur_128.png]]        | [[https://github.com/SavchenkoValeriy/emacs-icons][→ Link]]  |
+| =--with-skamacs-icon=                         | [[https://github.com/compufox][→ compufox]]                 | [[/icons/preview/skamacs_128.png]]                         | [[https://github.com/compufox/skamacs-icon][→ Link]]  |
+| =--with-spacemacs-icon=                       | [[https://github.com/nashamri][→ Nasser Alshammari]]        | [[/icons/preview/spacemacs_128.png]]                       | [[https://github.com/nashamri/spacemacs-logo][→ Link]]  |
+| =--with-savchenkovaleriy-big-sur-3d-icon=     | [[https://github.com/SavchenkoValeriy][→ Valeriy Savchenko]]        | [[/icons/preview/savchenkovaleriy-big-sur-3d_128.png]]     | [[https://github.com/SavchenkoValeriy/emacs-icons][→ Link]]  |
 
 ** Emacs configuration
 
@@ -419,6 +423,20 @@ In some cases (like when installing =cask=) regular =emacs= package will be requ
 #+BEGIN_SRC bash
 $ brew install cask --ignore-dependencies
 #+END_SRC
+
+** FAQ
+
+*** How to change/pin commit =emacs-plus@30= is built from
+
+The most current development version is consistently compiled from a specific branch. At the time of this writing, for instance, =emacs-plus@30= is being built from the =master= branch.
+
+Ordinarily, =brew= will update to the latest commit in the specified branch during installation, meaning the exact commit you're building from varies depending on the installation timing. As development versions are less stable than official releases, some users may prefer to pin a specific commit.
+
+Usually this is done by modifying formula (i.e. by executing =brew edit emacs-plus@30= and altering the =url= directive), but you can also set =HOMEBREW_EMACS_PLUS_30_REVISION= environment variable before installing =emacs-plus@30=:
+
+#+begin_src bash
+  $ HOMEBREW_EMACS_PLUS_30_REVISION=6abea4d98d1d964c68a78cb9b5321071da851654 brew install emacs-plus@30 [OPTIONS]
+#+end_src
 
 ** Screenshots
 
